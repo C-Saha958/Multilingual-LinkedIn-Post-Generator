@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Apply font to the whole component */
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Styling for the main post container (ChatGPT style box) */
+.post-container {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 22px;
+    background: #ffffff;
+    position: relative;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Copy Button Styles (ChatGPT look) */
+#copyBtn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(0,0,0,0.04); /* Subtle background */
+    border: 1px solid rgba(0,0,0,0.1); /* Subtle border */
+    padding: 6px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #555555; /* Dark gray icon color */
+    transition: 0.2s ease-in-out;
+    opacity: 0.8; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#copyBtn:hover {
+    background: rgba(0,0,0,0.1);
+    opacity: 1;
+}
+
+/* Post Header styles (Adjusted for no image) */
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+}
+/* Removed .profile-img styles */
+
+.creator-name {
+    font-size: 16px;
+    font-weight: 600; /* Medium bold */
+}
+.post-time {
+    color: gray;
+    font-size: 13px;
+}
+
+/* Post Content Styles */
+#post-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+    white-space: pre-wrap; 
+}
+
+/* Style for the character count display */
+.char-count-display {
+    text-align: right;
+    font-size: 0.8rem;
+    color: gray;
+    margin-top: 15px;
+    border-top: 1px dashed #eee;
+    padding-top: 10px;
+}

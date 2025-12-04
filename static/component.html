@@ -1,0 +1,79 @@
+<div class='post-container'>
+
+    <!-- Copy Button (Uses internal JavaScript) -->
+    <button id="copyBtn">
+        📄
+    </button>
+
+    <script>
+    // --- FIXED & COMPLETE copyPost FUNCTION ---
+    function copyPost() {
+        // Python replaces {{JS_SAFE_POST_TEXT}} with the content that needs to be copied.
+        navigator.clipboard.writeText(`{{JS_SAFE_POST_TEXT}}`); 
+        
+        const btn = document.getElementById("copyBtn");
+        // Store original styles to restore them
+        const originalBackground = btn.style.background;
+        const originalColor = btn.style.color;
+        const originalBorder = btn.style.borderColor;
+        
+        // Success feedback animation
+        btn.innerHTML = "✔"; 
+        btn.style.background = "#d4ffd4"; 
+        btn.style.color = "#1f7f1f";     
+        btn.style.borderColor = "#6aff6a";
+
+        setTimeout(() => {
+            btn.innerHTML = "📄";
+            btn.style.background = originalBackground;
+            btn.style.color = originalColor;
+            btn.style.borderColor = originalBorder;
+        }, 1000);
+    }
+    document.getElementById("copyBtn").onclick = copyPost;
+    
+    // --- Character Counting Logic ---
+    function updateCharCount() {
+        const postElement = document.getElementById("post-text");
+        const countElement = document.getElementById("char-count");
+        if (postElement && countElement) {
+            // Count characters, excluding leading/trailing whitespace
+            const text = postElement.textContent.trim();
+            const charCount = text.length;
+            // Split by any whitespace sequence to count words accurately
+            const wordCount = text.split(/\s+/).filter(word => word.length > 0).length;
+
+            let color = 'gray';
+            const LINKEDIN_MAX_CHARS = 3000;
+            const WARNING_THRESHOLD = 2500; 
+
+            if (charCount > WARNING_THRESHOLD) { 
+                color = 'orange';
+            }
+            if (charCount > LINKEDIN_MAX_CHARS) { 
+                color = 'red';
+            }
+            
+            countElement.innerHTML = `Characters: <span style="color:${color};">${charCount}</span> | Words: ${wordCount}`;
+        }
+    }
+    
+    // Run the count when the page loads
+    window.onload = updateCharCount; 
+    </script>
+
+    <!-- Header (simplified by removing logo) -->
+    <div class='post-header'>
+        <!-- Removed logo img tag -->
+        <div>
+            <b class='creator-name'>Creators' AI</b><br>
+            <span class='post-time'>Just now • Generated Post</span>
+        </div>
+    </div>
+
+    <!-- Post Content. The actual post text will be inserted by Streamlit/Python -->
+    <p id="post-text">{{POST_CONTENT}}</p>
+    
+    <!-- Character Count Display -->
+    <div id="char-count" class="char-count-display"></div>
+</div>
