@@ -45,10 +45,15 @@ custom HTML/CSS card replicates the LinkedIn look:
 ## Technology Stack
 
 | Component         | Technology | Purpose                           |
+
 | ----------------- | ---------- | --------------------------------- |
+
 | **Frontend / UI** | Streamlit  | Interactive web app               |
+
 | **LLM Inference** | Groq API   | Ultra-fast model execution        |
+
 | **AI Framework**  | LangChain  | Prompt templates + output parsing |
+
 | **Data Handling** | Pandas     | Few-shot filtering                |
 
 ## Setup and Installation
@@ -81,6 +86,7 @@ Prerequisites:
 ## Project Structure
 
 repo
+
 ├── main.py                  # Streamlit UI
 ├── post_generator.py        # Prompt construction + LLM logic
 ├── llm_helper.py            # Groq-client initialization
