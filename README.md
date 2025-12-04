@@ -8,7 +8,7 @@ It drastically reduces time spent brainstorming and writing posts, while ensurin
 
 ## Visualization
 
-[output.png]
+![Multilingual LinkedIn Post Generator UI Screenshot](output.png)
 
 ## Features
 ## Multilingual Generation
