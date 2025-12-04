@@ -44,17 +44,17 @@ custom HTML/CSS card replicates the LinkedIn look:
 
 ## Technology Stack
 
-| Component         | Technology | Purpose                           |
+| Component           | Technology   | Purpose                           |
 
-| ----------------- | ---------- | --------------------------------- |
+| -----------------   | ----------   | --------------------------------- |
 
-| **Frontend / UI** | Streamlit  | Interactive web app               |
+| **Frontend / UI**   | Streamlit    | Interactive web app               |
 
-| **LLM Inference** | Groq API   | Ultra-fast model execution        |
+| **LLM Inference**   | Groq API     | Ultra-fast model execution        |
 
-| **AI Framework**  | LangChain  | Prompt templates + output parsing |
+| **AI Framework**    | LangChain    | Prompt templates + output parsing |
 
-| **Data Handling** | Pandas     | Few-shot filtering                |
+| **Data Handling**   | Pandas       | Few-shot filtering                |
 
 ## Setup and Installation
 
