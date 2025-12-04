@@ -88,17 +88,29 @@ Prerequisites:
 repo
 
 ├── main.py                  # Streamlit UI
+
 ├── post_generator.py        # Prompt construction + LLM logic
+
 ├── llm_helper.py            # Groq-client initialization
+
 ├── few_shot_posts.py        # Few-shot data handling
+
 ├── data/
+
 │   ├── raw_posts.json       # Original sample posts
+
 │   └── processed_posts.json # Cleaned & structured posts
+
 ├── static/
+
 │   ├── component.html       # LinkedIn preview template
+
 │   └── component.css        # Custom styling
+
 ├── requirements.txt
+
 ├── .gitignore
+
 └── README.md
 
 ## Internal Workflow: Control and Data Flow
